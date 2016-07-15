@@ -1,6 +1,6 @@
 # grpc-basic-example
 
-This is a very small example using (grpc)[http://www.grpc.io/] the client and server is written in (Go)[https://golang.org/]
+This is a very small example using [grpc](http://www.grpc.io/) the client and server is written in [Go](https://golang.org/)
 
 ## Install
 
@@ -11,9 +11,10 @@ go run server/main.go
 go run client/main.go
 ```
 
-## Generate .proto file.
+## Generate myservice.pb.go file.
 
-Download the precompiled binary from https://github.com/google/protobuf/releases
+Download the precompiled binary from [github.com/google/protobuf](https://github.com/google/protobuf/releases) releases
+
 Copy the protoc binary inside the **myservice** directory
 
 ```
