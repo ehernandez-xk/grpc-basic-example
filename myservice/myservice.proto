@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package myService;
+
+service Greeter {
+  rpc GetGreeter(MyGreeter) returns (TheReplay){}
+}
+
+message MyGreeter {
+  string name = 1;
+}
+
+message TheReplay {
+  string reply = 1;
+}
