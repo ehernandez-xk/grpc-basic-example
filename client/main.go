@@ -13,6 +13,7 @@ const (
 )
 
 func main() {
+	// Set up a connection to the server.
 	conn, err := grpc.Dial(address, grpc.WithInsecure())
 	if err != nil {
 		log.Fatalf("did not connect: %v", err)
@@ -20,6 +21,7 @@ func main() {
 	defer conn.Close()
 	c := pb.NewGreeterClient(conn)
 
+	// Contact the server and print out its response.
 	r, err := c.GetGreeter(context.Background(), &pb.MyGreeter{Name: "eddy"})
 	if err != nil {
 		log.Fatalf("could not greet: %v", err)
