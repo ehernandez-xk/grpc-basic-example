@@ -1,10 +1,11 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"net"
 
-	pb "github.com/ehernandez-xk/basic-grpc/myservice"
+	pb "github.com/ehernandez-xk/grpc-basic-example/myservice"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 )
@@ -20,6 +21,7 @@ func (a *server) GetGreeter(ctx context.Context, in *pb.MyGreeter) (*pb.TheRepla
 }
 
 func main() {
+	fmt.Println("server on port: ", port)
 	lis, err := net.Listen("tcp", port)
 	if err != nil {
 		log.Fatalf("failed to listen: %v", err)

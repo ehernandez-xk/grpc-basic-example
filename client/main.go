@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	pb "github.com/ehernandez-xk/basic-grpc/myservice"
+	pb "github.com/ehernandez-xk/grpc-basic-example/myservice"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 )
